@@ -1,0 +1,26 @@
+{
+	"name": "urn-bld",
+	"version": "0.0.1",
+	"description": "Uranio build module for testing urn-cli",
+	"main": "dist/src/index.js",
+	"types": "dist/src/index.d.ts",
+	"scripts": {
+		"build": "tsc -b",
+		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/src/index.js\"",
+		"core": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-core/run.js\"",
+		"web": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-web/run.js\"",
+		"trx": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-trx/run.js\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@bitbucket.org/nbl7/urn-bld.git"
+	},
+	"keywords": [
+		"uranio",
+		"urn"
+	],
+	"author": "Andrea Reni <mail@nbl7.net>",
+	"license": "ISC",
+	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
+	"devDependencies": {}
+}
