@@ -30,7 +30,6 @@
 		"urn-web-dep": "bitbucket:nbl7/urn-web-dep"
 	},
 	"devDependencies": {
-		"ts-node-dev": "^1.1.6",
 		"urn-web-dep-dev": "bitbucket:nbl7/urn-web-dep-dev"
 	}
 }

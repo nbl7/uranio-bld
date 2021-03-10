@@ -30,7 +30,7 @@ export const atom_book:uranio.types.Book = {
 			}
 		}
 	},
-	products2: {
+	products2ee: {
 		api: {
 			url: 'products'
 		},
