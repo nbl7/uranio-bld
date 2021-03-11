@@ -27,6 +27,7 @@
 		"uranio": "./dist/.urn/web/"
 	},
 	"dependencies": {
+		"mongoose": "^5.11.15",
 		"urn-web-dep": "bitbucket:nbl7/urn-web-dep"
 	},
 	"devDependencies": {
