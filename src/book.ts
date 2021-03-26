@@ -7,26 +7,26 @@
 import uranio from 'uranio';
 
 export const atom_book:uranio.types.Book = {
-	product:{
-		api: {
-			url: 'products'
-		},
-		properties:{
-			title:{
+	prodee:{
+		properties: {
+			title: {
 				type: uranio.types.BookPropertyType.TEXT,
 				label: 'Title'
 			}
+		},
+		api:{
+			url: 'prods'
 		}
 	},
-	media:{
-		api: {
-			url: 'medias',
-		},
-		properties:{
-			title:{
+	prod76ss:{
+		properties: {
+			t:{
 				type: uranio.types.BookPropertyType.TEXT,
-				label: 'Title'
+				label: 'd'
 			}
+		},
+		api:{
+			url: 'prod23'
 		}
 	}
 };

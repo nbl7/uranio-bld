@@ -6,10 +6,7 @@
 	"types": "dist/src/index.d.ts",
 	"scripts": {
 		"build": "tsc -b",
-		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/src/index.js\"",
-		"core": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-core/run.js\"",
-		"web": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-web/run.js\"",
-		"trx": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/.urn/urn-trx/run.js\""
+		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/src/index.js\""
 	},
 	"repository": {
 		"type": "git",
