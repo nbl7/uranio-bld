@@ -21,13 +21,12 @@
 	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
 	"_moduleAliases": {
 		"urn_books": "./dist/.urn/books.js",
-		"uranio": "./dist/.urn/web/"
+		"uranio": "./dist/.urn/fnc/"
 	},
 	"dependencies": {
-		"mongoose": "^5.11.15",
-		"urn-web-dep": "bitbucket:nbl7/urn-web-dep"
+		"mongoose": "^5.11.15"
 	},
 	"devDependencies": {
-		"urn-web-dep-dev": "bitbucket:nbl7/urn-web-dep-dev"
+		"urn-fnc-dep": "bitbucket:nbl7/urn-fnc-dep-dev"
 	}
 }
