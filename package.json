@@ -20,13 +20,14 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
 	"_moduleAliases": {
-		"urn_books": "./dist/.urn/books.js",
-		"uranio": "./dist/.urn/fnc/"
+		"urn_books": "./dist/.uranio/books.js",
+		"uranio": "./dist/.uranio/repo/"
 	},
 	"dependencies": {
-		"mongoose": "^5.11.15"
+		"mongoose": "^5.11.15",
+		"urn-web-dep": "bitbucket:nbl7/urn-web-dep"
 	},
 	"devDependencies": {
-		"urn-fnc-dep": "bitbucket:nbl7/urn-fnc-dep-dev"
+		"urn-web-dep-dev": "bitbucket:nbl7/urn-web-dep-dev"
 	}
 }

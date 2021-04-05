@@ -6,3 +6,4 @@ config/*
 .urn/
 .urnlog
 .urnlog/
+.uranio/
