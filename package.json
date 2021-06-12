@@ -26,9 +26,11 @@
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-ntl-dep": "bitbucket:nbl7/urn-ntl-dep"
+		"urn-web-dep": "bitbucket:nbl7/urn-web-dep"
 	},
 	"devDependencies": {
-		"urn-ntl-dep-dev": "bitbucket:nbl7/urn-ntl-dep-dev"
+		"tsc-watch": "^4.2.3",
+		"typescript": "^4.3.2",
+		"urn-web-dep-dev": "bitbucket:nbl7/urn-web-dep-dev"
 	}
 }
