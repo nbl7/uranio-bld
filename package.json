@@ -21,8 +21,8 @@
 	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
 	"_moduleAliases": {
 		"urn_books": "./dist/.uranio/books.js",
-		"uranio": "./dist/.uranio/repo/",
-		"urn_core": "./dist/.uranio/repo/core/"
+		"uranio": "./dist/.uranio/lib/",
+		"urn_core": "./dist/.uranio/lib/core/"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
