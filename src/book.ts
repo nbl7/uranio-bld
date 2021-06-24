@@ -18,6 +18,9 @@ export const atom_book:uranio.types.Book = {
 		},
 		bll: () => {
 			return new MYBLL();
+		},
+		api: {
+			
 		}
 	}
 };
