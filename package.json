@@ -21,16 +21,15 @@
 	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
 	"_moduleAliases": {
 		"urn_books": "./dist/.uranio/books.js",
-		"uranio": "./dist/.uranio/lib/",
-		"urn_core": "./dist/.uranio/lib/core/"
+		"uranio": "./dist/.uranio/lib/"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-web-dep": "bitbucket:nbl7/urn-web-dep"
+		"urn-core-dep": "bitbucket:nbl7/urn-core-dep"
 	},
 	"devDependencies": {
 		"tsc-watch": "^4.2.3",
 		"typescript": "^4.3.2",
-		"urn-web-dep-dev": "bitbucket:nbl7/urn-web-dep-dev"
+		"urn-core-dep-dev": "bitbucket:nbl7/urn-core-dep-dev"
 	}
 }
