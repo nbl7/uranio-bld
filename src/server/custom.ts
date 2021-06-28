@@ -1,6 +1,6 @@
 import uranio from 'uranio';
 
-export class MYBLL extends uranio.bll.BLL<'mykart'>{
+export class MYBLL extends uranio.core.bll.BLL<'mykart'>{
 	constructor(){
 		super('mykart');
 	}

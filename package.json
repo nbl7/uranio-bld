@@ -20,16 +20,17 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
 	"_moduleAliases": {
-		"urn_books": "./dist/.uranio/books.js",
-		"uranio": "./dist/.uranio/lib/"
+		"uranio": "./dist/.uranio/lib/",
+		"uranio-books": "./dist/.uranio/server/books.js",
+		"uranio-client": "./dist/.uranio/lib/client"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-core-dep": "bitbucket:nbl7/urn-core-dep"
+		"urn-core-dep": "ssh://git@bitbucket.org/nbl7/urn-core-dep"
 	},
 	"devDependencies": {
 		"tsc-watch": "^4.2.3",
 		"typescript": "^4.3.2",
-		"urn-core-dep-dev": "bitbucket:nbl7/urn-core-dep-dev"
+		"urn-core-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-core-dep-dev"
 	}
 }
