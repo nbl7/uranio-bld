@@ -6,35 +6,49 @@
 		"declaration": true,
 		"esModuleInterop": true,
 		"experimentalDecorators": true,
-		"lib": [ "es2015" ],
+		"lib": [
+			"ESNext",
+			"ESNext.AsyncIterable",
+			"DOM"
+		],
 		"module": "commonjs",
 		"moduleResolution": "node",
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitThis": true,
 		"noImplicitAny": true,
-		"noUncheckedIndexedAccess": true,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"outDir": "./dist",
 		"rootDir": "./",
 		"paths": {
-			"urn_books": [".uranio/books"],
-			"urn_core": [".uranio/lib/core"],
-			"urn_core/*": [".uranio/lib/core/*"],
-			"uranio": [".uranio/lib/"]
+			"~/*": [
+				"./*"
+			],
+			"@/*": [
+				"./*"
+			],
+			"uranio-books": [".uranio/server/books"],
+			"uranio": [".uranio/lib/"],
+			"uranio-client": [".uranio/lib/client"],
+			"uranio-core": [".uranio/lib/core"],
+			"uranio-core/*": [".uranio/lib/core/*"]
 		},
 		"sourceMap": true,
 		"strict": true,
 		"strictNullChecks": true,
 		"strictFunctionTypes": true,
 		"strictPropertyInitialization": true,
-		"target": "es6"
+		"target": "ES2018",
+		"typeRoots": [
+			"node_modules/@types",
+			".uranio/client/src/types"
+		]
 	},
 	"include": [
 		"src/**/*",
 		".uranio/**/*"
 	],
 	"exclude": [
-		"dist/**/*"
+		"node_modules"
 	]
 }
