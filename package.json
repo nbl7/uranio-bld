@@ -22,15 +22,16 @@
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/lib/",
 		"uranio-books": "./dist/.uranio/server/books.js",
-		"uranio-client": "./dist/.uranio/lib/client"
+		"uranio-client": "./dist/.uranio/lib/client",
+		"uranio-core": "./dist/.uranio/lib/core/"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-core-dep": "ssh://git@bitbucket.org/nbl7/urn-core-dep"
+		"urn-web-dep": "ssh://git@bitbucket.org/nbl7/urn-web-dep"
 	},
 	"devDependencies": {
 		"tsc-watch": "^4.2.3",
 		"typescript": "^4.3.2",
-		"urn-core-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-core-dep-dev"
+		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-web-dep-dev"
 	}
 }
