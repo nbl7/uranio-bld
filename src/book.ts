@@ -6,7 +6,7 @@
 
 import uranio from 'uranio';
 
-import {some} from './s';
+import {some} from './server/s';
 
 import {MYBLL} from './server/custom';
 
