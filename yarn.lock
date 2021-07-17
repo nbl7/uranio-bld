@@ -2928,6 +2928,15 @@ uri-js@^4.2.2:
   dependencies:
     dateformat "^3.0.3"
 
+"urn-web-dep-dev@ssh://git@bitbucket.org/nbl7/urn-api-dep-dev":
+  version "0.0.1"
+  uid dd3f14fddcfadd279e2cc6954f71202ee50d1748
+  resolved "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev#dd3f14fddcfadd279e2cc6954f71202ee50d1748"
+  dependencies:
+    "@types/cors" "^2.8.9"
+    "@types/express" "^4.17.11"
+    urn-core-dep-dev "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git"
+
 "urn-web-dep-dev@ssh://git@bitbucket.org/nbl7/urn-web-dep-dev":
   version "0.0.1"
   resolved "ssh://git@bitbucket.org/nbl7/urn-web-dep-dev#dd3f14fddcfadd279e2cc6954f71202ee50d1748"
@@ -2936,9 +2945,9 @@ uri-js@^4.2.2:
     "@types/express" "^4.17.11"
     urn-core-dep-dev "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git"
 
-"urn-web-dep@ssh://git@bitbucket.org/nbl7/urn-web-dep":
+"urn-web-dep@ssh://git@bitbucket.org/nbl7/urn-api-dep":
   version "0.0.1"
-  resolved "ssh://git@bitbucket.org/nbl7/urn-web-dep#04dce27fedd600e2adf79bebdb11127b985fbc3a"
+  resolved "ssh://git@bitbucket.org/nbl7/urn-api-dep#04dce27fedd600e2adf79bebdb11127b985fbc3a"
   dependencies:
     cors "^2.8.5"
     express "^4.17.1"
