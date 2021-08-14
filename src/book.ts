@@ -20,7 +20,20 @@ export const atom_book:uranio.types.Book = {
 		},
 		api: {
 			url: 'mykarts',
-			auth: 'myauthkart'
+			auth: 'myauthkart',
+			routes: {
+				myroute:{
+					method: uranio.types.RouteMethod.GET,
+					action: uranio.types.AuthAction.READ,
+					url: '/myroute',
+					query: ['myq'],
+					call: async (api_request:uranio.types.ApiRequest) => {
+						console.log(api_request);
+						const urn_bll_errors = uranio.core.bll.basic.create('error');
+						return await urn_bll_errors.find({});
+					}
+				}
+			}
 		},
 		bll: () => {
 			console.log(some);
