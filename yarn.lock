@@ -798,6 +798,13 @@ at-least-node@^1.0.0:
   resolved "https://registry.yarnpkg.com/at-least-node/-/at-least-node-1.0.0.tgz#602cd4b46e844ad4effc92a8011a3c46e0238dc2"
   integrity sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==
 
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  dependencies:
+    follow-redirects "^1.10.0"
+
 babel-eslint@^10.0.1:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.1.0.tgz#6968e568a910b78fb3779cdd8b6ac2f479943232"
@@ -1802,6 +1809,11 @@ flatted@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.1.tgz#bbef080d95fca6709362c73044a1634f7c6e7d05"
   integrity sha512-OMQjaErSFHmHqZe+PSidH5n8j3O0F2DdnVh8JB4j4eUQ2k6KvB0qGfrKIhapvez5JerBbmWkaLYUYWISaESoXg==
+
+follow-redirects@^1.10.0:
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.1.tgz#d9114ded0a1cfdd334e164e6662ad02bfd91ff43"
+  integrity sha512-HWqDgT7ZEkqRzBvc2s64vSZ/hfOceEol3ac/7tKwzuvEyWx3/4UegXh5oBOIotkGsObyk3xznnSRVADBgWSQVg==
 
 fork-ts-checker-webpack-plugin@^6.1.1:
   version "6.2.13"
@@ -3778,6 +3790,29 @@ uri-js@^4.2.2:
   dependencies:
     dateformat "^3.0.3"
 
+"urn-trx-dep-dev@ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev":
+  version "0.0.1"
+  resolved "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev#b5e55a59e9efe1787e44abb0cb0305e85abd2633"
+  dependencies:
+    urn-web-dep-dev "git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git"
+
+"urn-trx-dep@ssh://git@bitbucket.org/nbl7/urn-trx-dep":
+  version "0.0.1"
+  resolved "ssh://git@bitbucket.org/nbl7/urn-trx-dep#1b89393c7d6a9f69767264316bbf52d99cf8fc88"
+  dependencies:
+    axios "^0.21.1"
+    module-alias "^2.2.2"
+    urn-web-dep "git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git"
+
+"urn-web-dep-dev@git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git":
+  version "0.0.1"
+  uid dd3f14fddcfadd279e2cc6954f71202ee50d1748
+  resolved "git+ssh://git@bitbucket.org/nbl7/urn-api-dep-dev.git#dd3f14fddcfadd279e2cc6954f71202ee50d1748"
+  dependencies:
+    "@types/cors" "^2.8.9"
+    "@types/express" "^4.17.11"
+    urn-core-dep-dev "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git"
+
 "urn-web-dep-dev@ssh://git@bitbucket.org/nbl7/urn-api-dep-dev":
   version "0.0.1"
   resolved "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev#dd3f14fddcfadd279e2cc6954f71202ee50d1748"
@@ -3785,6 +3820,14 @@ uri-js@^4.2.2:
     "@types/cors" "^2.8.9"
     "@types/express" "^4.17.11"
     urn-core-dep-dev "git+ssh://git@bitbucket.org/nbl7/urn-core-dep-dev.git"
+
+"urn-web-dep@git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git":
+  version "0.0.1"
+  resolved "git+ssh://git@bitbucket.org/nbl7/urn-api-dep.git#04dce27fedd600e2adf79bebdb11127b985fbc3a"
+  dependencies:
+    cors "^2.8.5"
+    express "^4.17.1"
+    urn-core-dep "git+ssh://git@bitbucket.org/nbl7/urn-core-dep.git"
 
 "urn-web-dep@ssh://git@bitbucket.org/nbl7/urn-api-dep":
   version "0.0.1"

@@ -28,6 +28,7 @@
 	"dependencies": {
 		"mongoose": "^5.11.15",
 		"urn-lib": "git+ssh://git@bitbucket.org/nbl7/urn-lib.git",
+		"urn-trx-dep": "ssh://git@bitbucket.org/nbl7/urn-trx-dep",
 		"urn-web-dep": "ssh://git@bitbucket.org/nbl7/urn-api-dep"
 	},
 	"devDependencies": {
@@ -41,6 +42,7 @@
 		"ttypescript": "^1.5.12",
 		"typescript": "^4.3.2",
 		"typescript-transform-paths": "^3.1.0",
+		"urn-trx-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev",
 		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev",
 		"vue-template-compiler": "^2.6.14"
 	}
