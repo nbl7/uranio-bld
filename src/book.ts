@@ -12,57 +12,32 @@ import {MYBLL} from './server/custom';
 
 export const atom_book:uranio.types.Book = {
 	mykart: {
+		plural: 'mykarts',
 		properties:{
 			title:{
 				type: uranio.types.BookPropertyType.TEXT,
-				label: `${some}title`
+				label: `${some}titless`
 			}
 		},
 		dock: {
-			url: 'mykarts',
-			auth: 'myauthkart',
-			routes: {
-				myroute:{
-					method: uranio.types.RouteMethod.GET,
-					action: uranio.types.AuthAction.READ,
-					url: '/myroute',
-					query: ['myq'],
-					call: async (api_request:uranio.types.Api.Request<'mykart', 'myroute'>) => {
-						console.log(api_request);
-						const urn_bll_errors = uranio.core.bll.basic.create('error');
-						return await urn_bll_errors.find_by_id('611bedc525e7b32c3f6415d8');
-					}
-				}
-			}
+			url: '/mykarts',
+			auth: '/myauthkart'
 		},
 		bll: () => {
-			console.log(some);
+			console.log(some + `s`);
 			return new MYBLL();
 		}
 	},
-	kart:{
-		properties:{
-			email: {
-				type: uranio.types.BookPropertyType.EMAIL,
-				label: 'EMAIL'
+	product: {
+		properties: {
+			title: {
+				type: uranio.types.BookPropertyType.TEXT,
+				label: 'Title'
 			}
 		},
 		dock: {
-			url: "/karts",
-			routes: {
-				mycustom: {
-					url: '/c/:id/:date',
-					query: ['sick'],
-					action: uranio.types.AuthAction.READ,
-					method: uranio.types.RouteMethod.GET,
-					call: async (_api_request:uranio.types.Api.Request<'kart', 'mycustom'>) => {
-						// urn_log.fn_debug(`Router Call GET [find] / [${atom_name}]`);
-						const urn_bll = uranio.core.bll.basic.create('request');
-						const bll_res = await urn_bll.find_by_id('611bedc525e7b32c3f6415d8');
-						return bll_res;
-					}
-				}
-			}
-		},
+			url: '/products',
+			auth: '/proauths'
+		}
 	}
 };
