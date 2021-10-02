@@ -5,8 +5,12 @@
 	"main": "dist/src/index.js",
 	"types": "dist/src/index.d.ts",
 	"scripts": {
-		"build": "tsc -b",
-		"dev": "./node_modules/.bin/tsc-watch --onSuccess \"node -r source-map-support/register -r module-alias/register ./dist/src/index.js\""
+		"build": "uranio build",
+		"dev": "uranio dev",
+		"build:server": "uranio build:client",
+		"build:client": "uranio build:client",
+		"dev:server": "uranio dev:server",
+		"dev:client": "uranio dev:client"
 	},
 	"repository": {
 		"type": "git",
@@ -20,30 +24,23 @@
 	"license": "ISC",
 	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
 	"_moduleAliases": {
-		"uranio": "./dist/.uranio/lib/",
-		"uranio-books": "./dist/.uranio/server/books.js",
-		"uranio-client": "./dist/.uranio/lib/client",
-		"uranio-core": "./dist/.uranio/lib/core/"
+		"uranio": "./dist/.uranio/server/src/uranio/",
+		"uranio-books": "./dist/.uranio/server/src/books/",
+		"uranio-api": "./dist/.uranio/server/src/uranio/api/",
+		"uranio-core": "./dist/.uranio/server/src/uranio/api/core/"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
-		"urn-lib": "git+ssh://git@bitbucket.org/nbl7/urn-lib.git",
-		"urn-trx-dep": "ssh://git@bitbucket.org/nbl7/urn-trx-dep",
-		"urn-web-dep": "ssh://git@bitbucket.org/nbl7/urn-api-dep"
+		"nuxt": "^2.15.8",
+		"urn-trx-dep": "ssh://git@bitbucket.org/nbl7/urn-trx-dep"
 	},
 	"devDependencies": {
-		"@nuxt/types": "^2.15.7",
+		"@nuxt/types": "^2.15.8",
 		"@nuxt/typescript-build": "^2.1.0",
-		"esbuild": "^0.12.16",
-		"esbuild-plugin-alias": "^0.1.2",
+		"@typescript-eslint/eslint-plugin": "^4.30.0",
+		"@typescript-eslint/parser": "^4.30.0",
 		"pug": "^3.0.2",
 		"pug-plain-loader": "^1.1.0",
-		"tsc-watch": "^4.2.3",
-		"ttypescript": "^1.5.12",
-		"typescript": "^4.3.2",
-		"typescript-transform-paths": "^3.1.0",
-		"urn-trx-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev",
-		"urn-web-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-api-dep-dev",
-		"vue-template-compiler": "^2.6.14"
+		"urn-trx-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev"
 	}
 }

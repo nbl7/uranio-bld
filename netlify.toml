@@ -1,9 +1,9 @@
 [build]
-  command = "yarn generate"
-  publish = "dist"
+  command = "yarn build"
+  publish = "dist/client/"
 
 [functions]
-  directory = "dist/.uranio/server/functions/"
+  directory = "dist/server/functions/"
 
 [[redirects]]
   from = "/uranio/*"
@@ -12,7 +12,7 @@
 
   [dev]
     framework = "#custom"
-    command = "yarn nuxtdev"
+    command = "yarn dev:client -v --native"
     targetPort = 3000
     debug = true
     port = 8888
