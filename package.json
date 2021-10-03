@@ -26,13 +26,14 @@
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/server/src/uranio/",
 		"uranio-books": "./dist/.uranio/server/src/books/",
-		"uranio-api": "./dist/.uranio/server/src/uranio/api/",
-		"uranio-core": "./dist/.uranio/server/src/uranio/api/core/"
+		"uranio-trx": "./dist/.uranio/server/src/uranio/trx/",
+		"uranio-api": "./dist/.uranio/server/src/uranio/trx/api/",
+		"uranio-core": "./dist/.uranio/server/src/uranio/trx/api/core/"
 	},
 	"dependencies": {
 		"mongoose": "^5.11.15",
 		"nuxt": "^2.15.8",
-		"urn-trx-dep": "ssh://git@bitbucket.org/nbl7/urn-trx-dep"
+		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep"
 	},
 	"devDependencies": {
 		"@nuxt/types": "^2.15.8",
@@ -41,6 +42,6 @@
 		"@typescript-eslint/parser": "^4.30.0",
 		"pug": "^3.0.2",
 		"pug-plain-loader": "^1.1.0",
-		"urn-trx-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev"
+		"urn-adm-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev"
 	}
 }

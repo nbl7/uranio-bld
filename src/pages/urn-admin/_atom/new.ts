@@ -108,7 +108,7 @@ export default Vue.extend<Data, Methods, Props, Props>({
 			console.log('EVENT:', event);
 			console.log('ATOM: ', this.atom);
 			
-			const trx_base = uranio.base.create(this.atom_name);
+			const trx_base = uranio.trx.base.create(this.atom_name);
 			
 			const cloned_atom = _process_atom(this.atom_name, this.atom);
 			
