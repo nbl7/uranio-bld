@@ -82,7 +82,7 @@ export default Vue.extend<Data<uranio.types.AtomName>, Methods, Computed, Props>
 				plural = (atom_def as any).plural;
 			}
 			
-			const trx_base = uranio.base.create(atom_name);
+			const trx_base = uranio.trx.base.create(atom_name);
 			
 			const trx_hook = trx_base.hook('find_id');
 			const hook_params = {
@@ -165,7 +165,7 @@ export default Vue.extend<Data<uranio.types.AtomName>, Methods, Computed, Props>
 			
 			console.log('Atom: ', this.atom);
 			
-			const trx_base = uranio.base.create(this.atom_name);
+			const trx_base = uranio.trx.base.create(this.atom_name);
 			
 			// const cloned_atom = _clean_atom(this.atom_name, this.atom);
 			const cloned_atom = _clean_atom(this.atom);
@@ -202,7 +202,7 @@ export default Vue.extend<Data<uranio.types.AtomName>, Methods, Computed, Props>
 			
 			const that = this as any;
 			
-			const trx_base = uranio.base.create(this.atom_name);
+			const trx_base = uranio.trx.base.create(this.atom_name);
 			
 			const trx_hook = trx_base.hook('delete');
 			

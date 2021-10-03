@@ -44,7 +44,7 @@ export default {
 			if(urn_util.object.has_key(atom_def, "plural")){
 				plural = (atom_def as any).plural;
 			}
-			const trx_base = uranio.base.create<A>(atom_name);
+			const trx_base = uranio.trx.base.create<A>(atom_name);
 			const trx_hook = trx_base.hook('find');
 			const trx_response = await trx_hook({
 				query:{

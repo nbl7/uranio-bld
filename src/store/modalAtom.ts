@@ -74,7 +74,7 @@ export const actions: ActionTree<RootState, RootState> = {
 	},
 	async get_atoms(context:any){
 		const atom_name = context.state.atom_prop_atom;
-		const trx_base = uranio.base.create(atom_name);
+		const trx_base = uranio.trx.base.create(atom_name);
 		const trx_response = await trx_base.hook("find")({});
 		if(trx_response.success && Array.isArray(trx_response.payload)){
 			context.commit('CHANGE_ATOMS', trx_response.payload);
