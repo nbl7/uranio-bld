@@ -72,7 +72,7 @@ export const atom_book:uranio.types.Book = {
 		properties: {
 			title: {
 				type: uranio.types.BookPropertyType.TEXT,
-				label: 'Title',
+				label: 'Title2',
 				// validation: {
 				//   alphanum: true,
 				//   contain_digit: false,
