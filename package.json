@@ -4,14 +4,6 @@
 	"description": "Uranio build module for testing urn-cli",
 	"main": "dist/src/index.js",
 	"types": "dist/src/index.d.ts",
-	"scripts": {
-		"build": "uranio build",
-		"dev": "uranio dev",
-		"build:server": "uranio build:client",
-		"build:client": "uranio build:client",
-		"dev:server": "uranio dev:server",
-		"dev:client": "uranio dev:client"
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+ssh://git@bitbucket.org/nbl7/urn-bld.git"
@@ -22,26 +14,5 @@
 	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
-	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
-	"_moduleAliases": {
-		"uranio": "./dist/.uranio/server/src/uranio/",
-		"uranio-books": "./dist/.uranio/server/src/books/",
-		"uranio-trx": "./dist/.uranio/server/src/uranio/trx/",
-		"uranio-api": "./dist/.uranio/server/src/uranio/trx/api/",
-		"uranio-core": "./dist/.uranio/server/src/uranio/trx/api/core/"
-	},
-	"dependencies": {
-		"mongoose": "^5.11.15",
-		"nuxt": "^2.15.8",
-		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep"
-	},
-	"devDependencies": {
-		"@nuxt/types": "^2.15.8",
-		"@nuxt/typescript-build": "^2.1.0",
-		"@typescript-eslint/eslint-plugin": "^4.30.0",
-		"@typescript-eslint/parser": "^4.30.0",
-		"pug": "^3.0.2",
-		"pug-plain-loader": "^1.1.0",
-		"urn-adm-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev"
-	}
+	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme"
 }
