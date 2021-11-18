@@ -14,5 +14,25 @@
 	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
-	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme"
+	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
+	"_moduleAliases": {
+		"uranio": "./dist/.uranio/server/src/uranio/",
+		"uranio-books": "./dist/.uranio/server/src/books/",
+		"uranio-api": "./dist/.uranio/server/src/uranio/api/",
+		"uranio-core": "./dist/.uranio/server/src/uranio/api/core/"
+	},
+	"scripts": {
+		"build": "uranio build",
+		"build:server": "uranio build:client",
+		"build:client": "uranio build:client",
+		"dev": "uranio dev",
+		"dev:server": "uranio dev:server",
+		"dev:client": "uranio dev:client"
+	},
+	"dependencies": {
+		"urn-trx-dep": "ssh://git@bitbucket.org/nbl7/urn-trx-dep"
+	},
+	"devDependencies": {
+		"urn-trx-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev"
+	}
 }
