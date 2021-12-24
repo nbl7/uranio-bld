@@ -18,8 +18,9 @@
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/server/src/uranio/",
 		"uranio-books": "./dist/.uranio/server/src/books/",
-		"uranio-api": "./dist/.uranio/server/src/uranio/api/",
-		"uranio-core": "./dist/.uranio/server/src/uranio/api/core/"
+		"uranio-trx": "./dist/.uranio/server/src/uranio/trx/",
+		"uranio-api": "./dist/.uranio/server/src/uranio/trx/api/",
+		"uranio-core": "./dist/.uranio/server/src/uranio/trx/api/core/"
 	},
 	"scripts": {
 		"build": "uranio build",
@@ -30,9 +31,9 @@
 		"dev:client": "uranio dev:client"
 	},
 	"dependencies": {
-		"urn-trx-dep": "ssh://git@bitbucket.org/nbl7/urn-trx-dep"
+		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep"
 	},
 	"devDependencies": {
-		"urn-trx-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-trx-dep-dev"
+		"urn-adm-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev"
 	}
 }
