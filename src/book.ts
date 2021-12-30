@@ -6,9 +6,9 @@
 
 import uranio from 'uranio';
 
-import {some} from './mylib/s';
+// import {some} from './mylib/s';
 
-import {MYBLL} from './custom/custom';
+// import {MYBLL} from './custom/custom';
 
 export const atom_book:uranio.types.Book = {
 	customer:{
@@ -19,6 +19,7 @@ export const atom_book:uranio.types.Book = {
 		},
 		properties: {
 			first_name: {
+				primary: true,
 				type: uranio.types.BookPropertyType.TEXT,
 				label: 'First name'
 			},
@@ -52,17 +53,20 @@ export const atom_book:uranio.types.Book = {
 		properties:{
 			title:{
 				type: uranio.types.BookPropertyType.TEXT,
-				label: `${some}-titless`
+				// label: `${some}-titless`
+				label: `titless`
 			}
 		},
 		dock: {
 			url: '/mykarts',
-			auth: '/myauthkart'
+			auth_url: '/myauthkart'
 		},
-		bll: () => {
-			console.log(some + `s`);
-			return new MYBLL();
-		}
+		// bll: {
+		//   class: () => {
+		//     console.log(some + `s`);
+		//     return new MYBLL();
+		//   }
+		// }
 	},
 	product: {
 		security:{
@@ -156,7 +160,7 @@ export const atom_book:uranio.types.Book = {
 		},
 		dock: {
 			url: '/products',
-			auth: '/proauths',
+			auth_url: '/proauths',
 			routes: {
 				myroute: {
 					method: uranio.types.RouteMethod.GET,
