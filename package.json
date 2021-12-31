@@ -1,12 +1,12 @@
 {
-	"name": "urn-bld",
+	"name": "uranio-bld",
 	"version": "0.0.1",
-	"description": "Uranio build module for testing urn-cli",
+	"description": "Uranio build module for testing uranio-cli",
 	"main": "dist/src/index.js",
 	"types": "dist/src/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@bitbucket.org/nbl7/urn-bld.git"
+		"url": "git+ssh://git@github.com/nbl7/uranio-bld.git"
 	},
 	"keywords": [
 		"uranio",
@@ -14,7 +14,7 @@
 	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
-	"homepage": "https://bitbucket.org/nbl7/urn-bld#readme",
+	"homepage": "https://github.com/nbl7/uranio-bld#readme",
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/server/src/uranio/",
 		"uranio-books": "./dist/.uranio/server/src/books/",
@@ -38,9 +38,9 @@
 		"@uppy/vue": "^0.4.5",
 		"@uppy/webcam": "^2.0.5",
 		"@uppy/xhr-upload": "^2.0.7",
-		"urn-adm-dep": "ssh://git@bitbucket.org/nbl7/urn-adm-dep"
+		"uranio-adm-dep": "ssh://git@github.com/nbl7/uranio-adm-dep"
 	},
 	"devDependencies": {
-		"urn-adm-dep-dev": "ssh://git@bitbucket.org/nbl7/urn-adm-dep-dev"
+		"uranio-adm-dep-dev": "ssh://git@github.com/nbl7/uranio-adm-dep-dev"
 	}
 }
