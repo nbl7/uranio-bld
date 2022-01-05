@@ -54,7 +54,7 @@ export const atom_book:uranio.types.Book = {
 			title:{
 				type: uranio.types.BookPropertyType.TEXT,
 				// label: `${some}-titless`
-				label: `titless`
+				label: `title`
 			}
 		},
 		dock: {
