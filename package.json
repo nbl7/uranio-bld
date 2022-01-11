@@ -15,7 +15,29 @@
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
 	"homepage": "https://github.com/nbl7/uranio-bld#readme",
-	"scripts": {},
-	"dependencies": {},
-	"devDependencies": {}
+	"scripts": {
+		"build": "uranio build",
+		"build:server": "uranio build:client",
+		"build:client": "uranio build:client",
+		"dev": "uranio dev",
+		"dev:server": "uranio dev:server",
+		"dev:client": "uranio dev:client"
+	},
+	"dependencies": {
+		"urn-adm-dep": "git+ssh://git@github.com/nbl7/uranio-adm-dep"
+	},
+	"devDependencies": {
+		"urn-adm-dep-dev": "git+ssh://git@github.com/nbl7/uranio-adm-dep-dev"
+	},
+	"_moduleAliases": {
+		"uranio": "./dist/.uranio/server/src/uranio/",
+		"uranio-books": "./dist/.uranio/server/src/books/",
+		"uranio-trx": "./dist/.uranio/server/src/uranio/trx/",
+		"uranio-api": "./dist/.uranio/server/src/uranio/trx/api/",
+		"uranio-core": "./dist/.uranio/server/src/uranio/trx/api/core/"
+	},
+	"resolutions": {
+		"@oclif/plugin-help": "3.2.14",
+		"colors": "1.4.0"
+	}
 }
