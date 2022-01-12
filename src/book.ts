@@ -20,8 +20,14 @@ export const atom_book:uranio.types.Book = {
 				label: 'Title'
 			},
 			price: {
+				primary: true,
 				type: uranio.types.BookPropertyType.FLOAT,
 				label: 'Price'
+			},
+			description: {
+				type: uranio.types.BookPropertyType.LONG_TEXT,
+				label: 'Description2',
+				on_error: () => ''
 			}
 		},
 		dock:{
