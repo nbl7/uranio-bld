@@ -23,8 +23,12 @@
 		"dev:server": "uranio dev:server",
 		"dev:client": "uranio dev:client"
 	},
-	"dependencies": {},
-	"devDependencies": {},
+	"dependencies": {
+		"urn-adm-dep": "git+ssh://git@github.com/nbl7/uranio-adm-dep"
+	},
+	"devDependencies": {
+		"urn-adm-dep-dev": "git+ssh://git@github.com/nbl7/uranio-adm-dep-dev"
+	},
 	"_moduleAliases": {
 		"uranio": "./dist/.uranio/server/src/uranio/",
 		"uranio-books": "./dist/.uranio/server/src/books/",
