@@ -26,8 +26,7 @@
 	"dependencies": {
 		"uranio": "git+ssh://git@github.com/nbl7/uranio-adm.git#master"
 	},
-	"devDependencies": {
-	},
+	"devDependencies": {},
 	"resolutions": {
 		"@oclif/plugin-help": "3.2.14",
 		"colors": "1.4.0"

@@ -1,7 +1,7 @@
 import uranio from 'uranio';
 
 export default uranio.register.atom({
-	plural: 'products',
+	plural: 'karts',
 	security: {
 		type: uranio.types.SecurityType.UNIFORM,
 		_r: uranio.types.PermissionType.NOBODY
@@ -21,6 +21,6 @@ export default uranio.register.atom({
 		}
 	},
 	dock: {
-		url: `/products`,
+		url: '/karts'
 	}
 });
