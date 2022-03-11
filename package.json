@@ -14,21 +14,5 @@
 	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
-	"homepage": "https://github.com/nbl7/uranio-bld#readme",
-	"scripts": {
-		"build": "uranio build",
-		"build:server": "uranio build:client",
-		"build:client": "uranio build:client",
-		"dev": "uranio dev",
-		"dev:server": "uranio dev:server",
-		"dev:client": "uranio dev:client"
-	},
-	"dependencies": {
-		"uranio": "git+ssh://git@github.com/nbl7/uranio-adm.git#master"
-	},
-	"devDependencies": {},
-	"resolutions": {
-		"@oclif/plugin-help": "3.2.14",
-		"colors": "1.4.0"
-	}
+	"homepage": "https://github.com/nbl7/uranio-bld#readme"
 }
