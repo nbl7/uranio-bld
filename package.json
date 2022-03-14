@@ -14,29 +14,5 @@
 	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
-	"homepage": "https://github.com/nbl7/uranio-bld#readme",
-	"resolutions": {
-		"@oclif/plugin-help": "3.2.14",
-		"colors": "1.4.0"
-	},
-	"dependencies": {
-		"uranio": "git+ssh://git@github.com/nbl7/uranio-adm.git#master"
-	},
-	"devDependencies": {
-		"@nuxt/types": "^2.15.8",
-		"@nuxt/typescript-build": "^2.1.0",
-		"@nuxtjs/style-resources": "^1.2.1",
-		"@types/dateformat": "^5.0.0",
-		"@typescript-eslint/eslint-plugin": "^5.14.0",
-		"@typescript-eslint/parser": "^5.14.0",
-		"forever": "^4.0.3",
-		"nodemon": "^2.0.15",
-		"pug": "^3.0.2",
-		"pug-plain-loader": "^1.1.0",
-		"sass": "^1.49.9",
-		"sass-loader": "^10.1.1",
-		"ts-loader": "^8.2.0",
-		"uranio-dev": "^0.0.1",
-		"vue-typed-mixins": "^0.2.0"
-	}
+	"homepage": "https://github.com/nbl7/uranio-bld#readme"
 }
