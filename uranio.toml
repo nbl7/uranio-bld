@@ -19,6 +19,18 @@ fetch = 'axios'
 	domain = 'localhost'
 	port = 7775
 	url = 'http://localhost:7775/uranio/api'
+[client.panel]
+	protocol = 'http'
+	domain = 'localhost'
+	port = 5454
+[client.dev.panel]
+	protocol = 'http'
+	domain = 'localhost'
+	port = 4477
+[client.fetch]
+	url = 'http://localhost:5454/uranio/api'
+[client.dev.fetch]
+	url = 'http://localhost:4477/uranio/api'
 [log]
 	debug_info = true
 	color = true
@@ -33,10 +45,6 @@ fetch = 'axios'
 	max_str_length = 174
 	prefix = ''
 	prefix_type = false
-[client.service]
-	url = 'http://localhost:7774/uranio/api'
-[client.dev.service]
-	url = 'http://localhost:5454/uranio/api'
 [client.log]
 	debug_info = false
 	color = false
