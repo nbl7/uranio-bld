@@ -12,6 +12,13 @@ export default uranio.register.atom({
 			on_error: () => {
 				return ''
 			}
+		},
+		price: {
+			type: uranio.types.PropertyType.FLOAT,
+			label: 'Price',
+			on_error: () => {
+				return 0
+			}
 		}
 	},
 	dock: {
