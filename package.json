@@ -14,23 +14,5 @@
 	],
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
-	"homepage": "https://github.com/nbl7/uranio-bld#readme",
-	"scripts": {
-		"build": "uranio build",
-		"build:server": "uranio build:client",
-		"build:panel": "uranio build:panel",
-		"dev": "uranio dev",
-		"dev:server": "uranio dev:server",
-		"dev:panel": "uranio dev:panel",
-		"postinstall": "yarn patch-package --patch-dir node_modules/uranio/patches"
-	},
-	"devDependencies": {
-		"patch-package": "^6.4.7",
-		"postinstall-postinstall": "^2.1.0"
-	},
-	"dependencies": {},
-	"resolutions": {
-		"@oclif/plugin-help": "3.2.14",
-		"colors": "1.4.0"
-	}
+	"homepage": "https://github.com/nbl7/uranio-bld#readme"
 }
