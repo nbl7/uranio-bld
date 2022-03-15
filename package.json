@@ -26,12 +26,9 @@
 	},
 	"devDependencies": {
 		"patch-package": "^6.4.7",
-		"postinstall-postinstall": "^2.1.0",
-		"urn-adm-dep-dev": "git+ssh://git@github.com/nbl7/uranio-adm-dep-dev#master"
+		"postinstall-postinstall": "^2.1.0"
 	},
-	"dependencies": {
-		"uranio": "git+ssh://git@github.com/nbl7/uranio-adm.git#master"
-	},
+	"dependencies": {},
 	"resolutions": {
 		"@oclif/plugin-help": "3.2.14",
 		"colors": "1.4.0"
