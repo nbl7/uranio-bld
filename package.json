@@ -15,11 +15,9 @@
 	"author": "Andrea Reni <mail@nbl7.net>",
 	"license": "ISC",
 	"homepage": "https://github.com/nbl7/uranio-bld#readme",
-	"devDependencies": {},
+	"devDependencies": {
+		"fork-ts-checker-webpack-plugin": "^7.2.1"
+	},
 	"scripts": {},
-	"dependencies": {},
-	"resolutions": {
-		"@oclif/plugin-help": "3.2.14",
-		"colors": "1.4.0"
-	}
+	"dependencies": {}
 }
