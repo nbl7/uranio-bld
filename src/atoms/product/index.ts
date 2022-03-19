@@ -4,7 +4,7 @@ export default uranio.register.atom({
 	properties: {
 		title: {
 			type: uranio.types.PropertyType.TEXT,
-			label: 'Title'
+			label: 'Titlew'
 		},
 		body: {
 			type: uranio.types.PropertyType.LONG_TEXT,
@@ -17,12 +17,12 @@ export default uranio.register.atom({
 			type: uranio.types.PropertyType.FLOAT,
 			label: 'Price',
 			on_error: () => {
-				return 0
+				return 1
 			}
 		}
 	},
 	dock: {
-		url: '/products'
+		url: '/products_'
 	},
 	security:{
 		type: uranio.types.SecurityType.UNIFORM,
