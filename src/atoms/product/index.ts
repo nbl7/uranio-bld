@@ -4,7 +4,7 @@ export default uranio.register.atom({
 	properties: {
 		title: {
 			type: uranio.types.PropertyType.TEXT,
-			label: 'Titlew'
+			label: 'Title'
 		},
 		body: {
 			type: uranio.types.PropertyType.LONG_TEXT,
@@ -19,10 +19,10 @@ export default uranio.register.atom({
 			on_error: () => {
 				return 1
 			}
-		}
+		},
 	},
 	dock: {
-		url: '/products_'
+		url: '/products'
 	},
 	security:{
 		type: uranio.types.SecurityType.UNIFORM,
