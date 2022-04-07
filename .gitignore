@@ -1,10 +1,5 @@
-node_modules/
-dist/
+node_modules
 .uranio/
 .urnlog
-yarn.lock
-yarn-error.log
-package-lock.json
 .env
-*.swp
-uranio.json
+yarn.lock
