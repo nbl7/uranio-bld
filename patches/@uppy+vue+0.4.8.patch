@@ -1,0 +1,91 @@
+diff --git a/node_modules/@uppy/vue/lib/dashboard-modal.js b/node_modules/@uppy/vue/lib/dashboard-modal.js
+index 2e02577..d55d72c 100644
+--- a/node_modules/@uppy/vue/lib/dashboard-modal.js
++++ b/node_modules/@uppy/vue/lib/dashboard-modal.js
+@@ -104,9 +104,11 @@ export default {
+     } // Otherwise, we use the `h` function from the Vue package (in Vue 3 fashion)
+ 
+ 
+-    return Vue.h('div', {
++    return Vue[H()]('div', {
+       ref: 'container'
+     });
+   }
+ 
+ };
++
++const H = () => 'h';
+\ No newline at end of file
+diff --git a/node_modules/@uppy/vue/lib/dashboard.js b/node_modules/@uppy/vue/lib/dashboard.js
+index d27ff8b..49ddf92 100644
+--- a/node_modules/@uppy/vue/lib/dashboard.js
++++ b/node_modules/@uppy/vue/lib/dashboard.js
+@@ -87,10 +87,11 @@ export default {
+       });
+     } // Otherwise, we use the `h` function from the Vue package (in Vue 3 fashion)
+ 
+-
+-    return Vue.h('div', {
++    return Vue[H()]('div', {
+       ref: 'container'
+     });
+   }
+ 
+ };
++
++const H = () => 'h';
+\ No newline at end of file
+diff --git a/node_modules/@uppy/vue/lib/drag-drop.js b/node_modules/@uppy/vue/lib/drag-drop.js
+index a7445d1..c16cffd 100644
+--- a/node_modules/@uppy/vue/lib/drag-drop.js
++++ b/node_modules/@uppy/vue/lib/drag-drop.js
+@@ -83,9 +83,11 @@ export default {
+     } // Otherwise, we import the `h` function from the Vue package (in Vue 3 fashion)
+ 
+ 
+-    return Vue.h('div', {
++    return Vue[H()]('div', {
+       ref: 'container'
+     });
+   }
+ 
+ };
++
++const H = () => 'h';
+\ No newline at end of file
+diff --git a/node_modules/@uppy/vue/lib/progress-bar.js b/node_modules/@uppy/vue/lib/progress-bar.js
+index 0dea165..065f9f6 100644
+--- a/node_modules/@uppy/vue/lib/progress-bar.js
++++ b/node_modules/@uppy/vue/lib/progress-bar.js
+@@ -79,9 +79,11 @@ export default {
+     } // Otherwise, we import the `h` function from the Vue package (in Vue 3 fashion)
+ 
+ 
+-    return Vue.h('div', {
++    return Vue[H()]('div', {
+       ref: 'container'
+     });
+   }
+ 
+ };
++
++const H = () => 'h';
+\ No newline at end of file
+diff --git a/node_modules/@uppy/vue/lib/status-bar.js b/node_modules/@uppy/vue/lib/status-bar.js
+index 254ed50..fd14a17 100644
+--- a/node_modules/@uppy/vue/lib/status-bar.js
++++ b/node_modules/@uppy/vue/lib/status-bar.js
+@@ -83,9 +83,11 @@ export default {
+     } // Other wise, we import the `h` function from the Vue package (in Vue 3 fashion)
+ 
+ 
+-    return Vue.h('div', {
++    return Vue[H()]('div', {
+       ref: 'container'
+     });
+   }
+ 
+ };
++
++const H = () => 'h';
+\ No newline at end of file
