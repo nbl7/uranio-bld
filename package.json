@@ -6,17 +6,17 @@
 	"types": "dist/index.d.ts",
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/nbl7/uranio-bld.git"
+		"url": "git+ssh://git@github.com/x71c9/uranio-bld.git"
 	},
 	"keywords": [
 		"uranio",
 		"urn"
 	],
-	"author": "Andrea Reni <mail@nbl7.net>",
+	"author": "Andrea Reni <108585118+x71c9@users.noreply.github.com>",
 	"license": "ISC",
-	"homepage": "https://github.com/nbl7/uranio-bld#readme",
+	"homepage": "https://github.com/x71c9/uranio-bld#readme",
 	"devDependencies": {
-		"urn-adm-dep-dev": "git+ssh://git@github.com/nbl7/uranio-adm-dep-dev#master"
+		"urn-adm-dep-dev": "git+ssh://git@github.com/x71c9/uranio-adm-dep-dev#master"
 	},
 	"scripts": {
 		"build": "uranio build",
@@ -28,7 +28,7 @@
 		"postinstall": "yarn patch-package --patch-dir node_modules/uranio/patches"
 	},
 	"dependencies": {
-		"uranio": "git+ssh://git@github.com/nbl7/uranio-adm.git#master"
+		"uranio": "git+ssh://git@github.com/x71c9/uranio-adm.git#master"
 	},
 	"resolutions": {
 		"@oclif/plugin-help": "3.2.14",
