@@ -14,24 +14,5 @@
 	],
 	"author": "Andrea Reni <108585118+x71c9@users.noreply.github.com>",
 	"license": "ISC",
-	"homepage": "https://github.com/x71c9/uranio-bld#readme",
-	"devDependencies": {
-		"urn-adm-dep-dev": "git+ssh://git@github.com/x71c9/uranio-adm-dep-dev#master"
-	},
-	"scripts": {
-		"build": "uranio build",
-		"build:server": "uranio build:client",
-		"build:panel": "uranio build:panel",
-		"dev": "uranio dev",
-		"dev:server": "uranio dev:server",
-		"dev:panel": "uranio dev:panel",
-		"postinstall": "yarn patch-package --patch-dir node_modules/uranio/patches"
-	},
-	"dependencies": {
-		"uranio": "git+ssh://git@github.com/x71c9/uranio-adm.git#master"
-	},
-	"resolutions": {
-		"@oclif/plugin-help": "3.2.14",
-		"colors": "1.4.0"
-	}
+	"homepage": "https://github.com/x71c9/uranio-bld#readme"
 }
