@@ -1,4 +1,8 @@
-
+node_modules/
+.DS_Store
+*.swp
 .uranio/
 .urnlog
 .env
+yarn.lock
+package-lock.json
