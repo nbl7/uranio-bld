@@ -1,5 +1,4 @@
-node_modules
+
 .uranio/
 .urnlog
 .env
-yarn.lock
