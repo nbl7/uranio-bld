@@ -16,5 +16,5 @@
 [client.fetch]
 	url = 'https://0.0.0.0:7788/uranio/api'
 [log]
-	debug_info = true
+	debug_info = false
 	color = true
