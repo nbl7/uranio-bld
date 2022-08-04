@@ -17,5 +17,9 @@
 	"homepage": "https://github.com/x71c9/uranio-bld#readme",
 	"scripts": {},
 	"devDependencies": {},
-	"dependencies": {}
+	"dependencies": {},
+	"resolutions": {
+		"@oclif/plugin-help": "3.2.14",
+		"colors": "1.4.0"
+	}
 }
