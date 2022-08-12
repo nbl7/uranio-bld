@@ -26,7 +26,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD_TOKEN }}
 
-      - uses: webfactory/ssh-agent@v0.5.4
+      - name: Set up Docker Buildx
+        id: buildx
+        uses: docker/setup-buildx-action@v2
+
+      - name: Configure SSH agent
+        uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
