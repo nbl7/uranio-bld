@@ -2,7 +2,7 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Publish Docker image
+name: Publish Uranio Docker Image
 
 on:
   push:
@@ -14,7 +14,7 @@ env:
 
 jobs:
   push_to_registry:
-    name: Push Docker image to Docker Hub
+    name: Push Uranio Docker image to Docker Hub
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
@@ -37,14 +37,14 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Install uranio
+      - name: Install Uranio
         run: yarn global add uranio
 
       - name: Set outputs
         id: vars
         run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
-      - name: Init uranio
+      - name: Init Uranio
         run: uranio init -uf --prod --docker --repo=adm
 
       - name: Uranio push to docker hub
