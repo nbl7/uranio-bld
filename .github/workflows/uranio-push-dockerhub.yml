@@ -27,7 +27,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD_TOKEN }}
 
       - name: Install uranio
-        run: yarn global install uranio
+        run: yarn global add uranio
 
       - name: Set outputs
         id: vars
