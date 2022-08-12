@@ -28,6 +28,8 @@ jobs:
 
       - name: Install uranio
         run: yarn global add uranio
+        with:
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Set outputs
         id: vars
