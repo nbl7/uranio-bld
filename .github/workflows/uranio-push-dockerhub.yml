@@ -26,10 +26,12 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD_TOKEN }}
 
+      - uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
       - name: Install uranio
         run: yarn global add uranio
-        with:
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Set outputs
         id: vars
