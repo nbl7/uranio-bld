@@ -12,7 +12,7 @@ on:
 env:
   REGISTRY: registry.gitlab.com
   REGISTRY_USERNAME: x71c9
-  FULL_TAG: registry.gitlab.com/uranio/${{ github.repositiry }}
+  FULL_TAG: registry.gitlab.com/uranio/${{ github.event.repository.name }}
   # IMAGE_NAME: ${{ github.repository }}
 
 jobs:
