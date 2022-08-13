@@ -6,23 +6,27 @@
 	error = true
 [service]
 	protocol = 'https'
-	domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
+	# domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
+	domain = 'localhost'
 	port = 7799
-	url = 'https://ec2-15-161-110-3.eu-south-1.compute.amazonaws.com:7799/uranio/api'
+	# url = 'https://ec2-15-161-110-3.eu-south-1.compute.amazonaws.com:7799/uranio/api'
+	url = 'https://localhost:7799/uranio/api'
 [dev.service]
 	domain = 'localhost'
 	url = 'https://localhost:7799/uranio/api'
 [client.panel]
 	protocol = 'https'
-	domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
+	# domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
+	domain = 'localhost'
 	port = 443
 [dev.client.panel]
 	domain = 'localhsot'
 	port = 7788
 [client.fetch]
-	url = 'https://ec2-15-161-110-3.eu-south-1.compute.amazonaws.com:443/uranio/api'
-[dev.client.fetch]
+	# url = 'https://ec2-15-161-110-3.eu-south-1.compute.amazonaws.com:443/uranio/api'
 	url = 'https://localhost:443/uranio/api'
+[dev.client.fetch]
+	url = 'https://localhost:7799/uranio/api'
 [log]
 	debug_info = false
 	color = true
