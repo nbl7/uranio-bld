@@ -19,14 +19,14 @@
 	# domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
 	domain = '0.0.0.0'
 	port = 443
-[dev.client.panel]
-	domain = 'localhsot'
+[client.dev.panel]
 	port = 7788
 [client.fetch]
-	url = 'https://ec2-15-161-110-3.eu-south-1.compute.amazonaws.com:443/uranio/api'
+	# url = 'https://ec2-15-161-110-3.eu-south-1.compute.amazonaws.com:443/uranio/api'
+	url = 'https://0.0.0.0:7788/uranio/api'
 	# url = 'https://localhost:443/uranio/api'
-[dev.client.fetch]
-	url = 'https://localhost:7799/uranio/api'
+[client.dev.fetch]
+	url = 'https://0.0.0.0:7788/uranio/api'
 [log]
 	debug_info = false
 	color = true
