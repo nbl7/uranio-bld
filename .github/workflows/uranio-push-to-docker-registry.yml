@@ -55,8 +55,9 @@ jobs:
       - name: Uranio Push to Docker Registry
         run: |
           uranio docker push \
-          --docker_tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.sha_short }}
+          --docker_tag="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.sha_short }}"
 
+  #" Comment needed for syntax highlighting bug 
   run_ssh_update_script:
     name: Run script on AWS that update container
     needs: "push_to_registry"
