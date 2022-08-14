@@ -67,4 +67,9 @@ The public key can be extracted from the private key with the following command:
 ssh-keygen -y -f <path_to_private_key>
 ```
 
+Also the repository `github.com/x71c9/uranio-cicd` must be cloned in
+`~/repos/uranio-cicd/`.
+
+
+
 
