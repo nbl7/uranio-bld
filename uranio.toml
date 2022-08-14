@@ -1,32 +1,12 @@
 ## TOML Uranio
-[default_atoms]
-	user = false
-	media = false
-	request = true
-	error = true
 [service]
 	protocol = 'https'
-	# domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
-	domain = 'localhost'
+	domain = '0.0.0.0'
 	port = 7799
-	# url = 'https://ec2-15-161-110-3.eu-south-1.compute.amazonaws.com:7799/uranio/api'
-	url = 'https://localhost:7799/uranio/api'
-[dev.service]
-	domain = 'localhost'
-	url = 'https://localhost:7799/uranio/api'
+	url = 'https://0.0.0.0:443/uranio/api'
 [client.panel]
 	protocol = 'https'
-	# domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
 	domain = '0.0.0.0'
 	port = 443
-[client.dev.panel]
-	port = 7788
-[client.fetch]
-	# url = 'https://ec2-15-161-110-3.eu-south-1.compute.amazonaws.com:443/uranio/api'
-	url = 'https://0.0.0.0:7788/uranio/api'
-	# url = 'https://localhost:443/uranio/api'
-[client.dev.fetch]
-	url = 'https://0.0.0.0:7788/uranio/api'
-[log]
-	debug_info = false
-	color = true
+[client.service]
+	url = 'https://0.0.0.0:443/uranio/api'
