@@ -35,12 +35,12 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ env.REGISTRY_USERNAME }}
-          password: ${{ secrets.REGISTRY_PASSWORD_TOKEN }}
+          password: ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }}
 
       - name: Configure SSH agent
         uses: webfactory/ssh-agent@v0.5.4
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-private-key: ${{ secrets.GH_PRIVATE_KEY }}
 
       - name: Install Uranio
         run: yarn global add uranio
@@ -67,13 +67,13 @@ jobs:
     steps:
       - name: Add known host
         run: |
-          mkdir ~/.ssh/ && ssh-keyscan -t rsa ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+          mkdir ~/.ssh/ && ssh-keyscan -t rsa ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
 
       - name: Run update_container.sh
         run: |
           echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
           && chmod 400 key.pem \
-          && ssh -i key.pem ec2-user@${{ secrets.HOST }} \
+          && ssh -i key.pem ec2-user@${{ secrets.AWS_HOST }} \
           'bash -s < ~/scripts/gitlab/update_container.sh \
           ${{ env.GITLAB_PROJECT_ID }} \
           ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
