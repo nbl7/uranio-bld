@@ -70,10 +70,10 @@ jobs:
           echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
           && chmod 400 key.pem \
           && ssh ec2-user@${{ secrets.HOST }} \
-          'bash -s' < ~/scripts/gitlab/update_container.sh \
+          'bash -s < ~/scripts/gitlab/update_container.sh \
           ${{ env.GITLAB_PROJECT_ID }} \
           ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
           ${{ github.event.repository.name }} \
-          ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}'
 
 
