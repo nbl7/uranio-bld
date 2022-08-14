@@ -61,12 +61,14 @@ jobs:
     name: Run script on AWS that update container
     # needs: "push_to_registry"
     runs-on: ubuntu-latest
+    # echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
+    # && chmod 400 key.pem \
+    # ssh-add - <<<"${{ secrets.AWS_PRIVATE_KEY }}" \
     steps:
       - name: Run update_container.sh
         run: |
-          ssh-add - <<<"${{ secrets.AWS_PRIVATE_KEY }}" \
-          # echo ${{ secrets.AWS_PRIVATE_KEY }} > key.pem \
-          # && chmod 400 key.pem \
+          echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
+          && chmod 400 key.pem \
           && ssh ec2-user@${{ secrets.HOST }} \
           'bash -s' < ~/scripts/gitlab/update_container.sh \
           ${{ env.GITLAB_PROJECT_ID }} \
