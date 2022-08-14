@@ -53,6 +53,12 @@ At the moment the Docker Registry is on GitLab.
 		(Generated on Gitlab > Preferences > Access Tokens)
 		- `AWS_HOST` [ ec2-**-**-**-**.eu-south-1.compute.amazonaws.com ]
 
+The last job run a script inside AWS EC2, the script do the following:
+	- `docker system prune -af` -> delete all docker cache. The machine has small storage.
+	- `docker stop [container name]` -> stop the running container
+	- `docker rm [cotainer_name]` -> remove the stopped container
+	- `docker run ...` -> download the new image and run a new container
+
 In order for the last command to work the public key must be added on EC2,
 so it must be listed in EC2 `~/.ssh/authorized_keys`
 
