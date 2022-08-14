@@ -64,9 +64,10 @@ jobs:
     steps:
       - name: Run update_container.sh
         run: |
-          echo ${{ secrets.AWS_PRIVATE_KEY }} > key.pem \
-          && chmod 400 key.pem \
-          && ssh -i key.pem ec2-user@${{ secrets.HOST }} \
+          ssh-add - <<< "${{ secrets.AWS_PRIVATE_KEY }}" \
+          # echo ${{ secrets.AWS_PRIVATE_KEY }} > key.pem \
+          # && chmod 400 key.pem \
+          && ssh ec2-user@${{ secrets.HOST }} \
           'bash -s' < ~/scripts/gitlab/update_container.sh \
           ${{ env.GITLAB_PROJECT_ID }} \
           ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
