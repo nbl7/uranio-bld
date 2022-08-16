@@ -2,11 +2,9 @@
 [service]
 	protocol = 'https'
 	domain = '0.0.0.0'
-	port = 7799
-	url = 'https://0.0.0.0:443/uranio/api'
+	port = 7791
+	url = 'https://0.0.0.0:7792/uranio/api'
 [client.panel]
 	protocol = 'https'
 	domain = '0.0.0.0'
-	port = 443
-[client.service]
-	url = 'https://0.0.0.0:443/uranio/api'
+	port = 7792
