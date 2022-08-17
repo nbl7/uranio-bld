@@ -16,8 +16,8 @@
 	"author": "Andrea Reni <108585118+x71c9@users.noreply.github.com>",
 	"homepage": "https://github.com/x71c9/uranio-bld#readme",
 	"scripts": {},
-	"dependencies": {},
 	"devDependencies": {},
+	"dependencies": {},
 	"resolutions": {
 		"@oclif/plugin-help": "3.2.14",
 		"colors": "1.4.0"

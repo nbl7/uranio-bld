@@ -1,4 +1,6 @@
 ## TOML Uranio
+ssl_secure = false
+dev_ssl_secure = false
 [service]
 	protocol = 'https'
 	domain = '0.0.0.0'
