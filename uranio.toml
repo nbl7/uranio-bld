@@ -10,7 +10,8 @@ dev_ssl_secure = false
 	port = 7373
 [client.panel]
 	protocol = 'https'
-	domain = '0.0.0.0'
+	domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
 	port = 443
 [client.dev.panel]
+	domain = '0.0.0.0'
 	port = 8383
