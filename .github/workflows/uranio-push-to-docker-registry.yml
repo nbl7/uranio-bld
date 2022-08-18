@@ -53,7 +53,7 @@ jobs:
         run: uranio init -uf --repo=adm
 
       - name: Init Build
-        run: uranio build --docker_load
+        run: uranio docker build --docker_load
 
       - name: Uranio Push to Docker Registry
         run: |
