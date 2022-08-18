@@ -76,5 +76,3 @@ And the SSL certificate must be uploaded to AWS in:
 ```
 
 
-
-
