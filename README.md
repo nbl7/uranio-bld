@@ -27,7 +27,7 @@ At the moment the Docker Registry is on GitLab.
 	- `echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"`
 
 - Init Uranio - This creates the docker image with the repository file.
-	- `uranio init -uf --prod --docker --repo=adm`
+	- `uranio init -uf --repo=adm`
 
 - Push the image to the Registry with Uranio
 	- `uranio docker push --docker_tag ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.sha_short }}`
@@ -69,6 +69,11 @@ ssh-keygen -y -f <path_to_private_key>
 
 Also the repository `github.com/x71c9/uranio-cicd` must be cloned in
 `~/repos/uranio-cicd/`.
+
+And the SSL certificate must be uploaded to AWS in:
+```
+/home/ec2-user/.certs/uranio-bld/
+```
 
 
 
