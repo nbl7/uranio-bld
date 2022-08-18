@@ -4,12 +4,12 @@ dev_ssl_secure = false
 [service]
 	protocol = 'https'
 	domain = '0.0.0.0'
-	port = 7171
+	port = 7777
 [dev.service]
 	port = 7373
 [client.panel]
 	protocol = 'https'
 	domain = '0.0.0.0'
-	port = 8181
+	port = 443
 [client.dev.panel]
 	port = 8383
