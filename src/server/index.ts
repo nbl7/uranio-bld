@@ -11,4 +11,3 @@ console.log('THIS IS A CUSTOM LOG FROM THE SERVER.');
 console.log(uranio.conf.get_all());
 
 console.log('THIS IS A CUSTOM LOG FROM THE SERVER 2.');
-
