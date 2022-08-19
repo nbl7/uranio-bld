@@ -3,15 +3,13 @@ ssl_secure = false
 dev_ssl_secure = false
 [service]
 	protocol = 'https'
-	domain = 'ip-172-31-23-187.eu-south-1.compute.internal'
+	domain = '0.0.0.0'
 	port = 7777
 [dev.service]
-	domain = '0.0.0.0'
 	port = 7373
 [client.panel]
 	protocol = 'https'
-	domain = 'ip-172-31-23-187.eu-south-1.compute.internal'
+	domain = '0.0.0.0'
 	port = 443
 [client.dev.panel]
-	domain = '0.0.0.0'
 	port = 8383
