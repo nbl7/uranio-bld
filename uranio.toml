@@ -8,14 +8,14 @@ dev_ssl_secure = false
 	request = true
 [service]
 	protocol = 'https'
-	domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
+	domain = 'uranio-bld.uranio.xyz'
 	port = 7777
 [dev.service]
 	domain = '0.0.0.0'
 	port = 7373
 [client.panel]
 	protocol = 'https'
-	domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
+	domain = 'uranio-bld.uranio.xyz'
 	port = 443
 [client.dev.panel]
 	domain = '0.0.0.0'
