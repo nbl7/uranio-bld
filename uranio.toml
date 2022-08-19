@@ -1,15 +1,20 @@
 ## TOML Uranio
 ssl_secure = false
 dev_ssl_secure = false
+[default_atoms]
+	user = true
+	media = true
+	error = true
+	request = true
 [service]
-	protocol = 'http'
+	protocol = 'https'
 	domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
 	port = 7777
 [dev.service]
 	domain = '0.0.0.0'
 	port = 7373
 [client.panel]
-	protocol = 'http'
+	protocol = 'https'
 	domain = 'ec2-15-161-110-3.eu-south-1.compute.amazonaws.com'
 	port = 80
 [client.dev.panel]
