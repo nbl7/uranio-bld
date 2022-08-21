@@ -17,65 +17,65 @@ env:
   # IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  push_to_registry:
-    name: Push Uranio Docker image to Docker Registry
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@v3
+  # push_to_registry:
+  #   name: Push Uranio Docker image to Docker Registry
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Check out the repo
+  #       uses: actions/checkout@v3
 
-      - name: Set up Docker Buildx
-        id: buildx
-        uses: docker/setup-buildx-action@v2
-        with:
-          install: true
+  #     - name: Set up Docker Buildx
+  #       id: buildx
+  #       uses: docker/setup-buildx-action@v2
+  #       with:
+  #         install: true
 
-      - name: Log in to Docker Registry
-        uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ env.REGISTRY_USERNAME }}
-          password: ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }}
+  #     - name: Log in to Docker Registry
+  #       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+  #       with:
+  #         registry: ${{ env.REGISTRY }}
+  #         username: ${{ env.REGISTRY_USERNAME }}
+  #         password: ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }}
 
-      - name: Configure SSH agent
-        uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.GH_PRIVATE_KEY }}
+  #     - name: Configure SSH agent
+  #       uses: webfactory/ssh-agent@v0.5.4
+  #       with:
+  #         ssh-private-key: ${{ secrets.GH_PRIVATE_KEY }}
 
-      - name: Install Uranio
-        run: yarn global add uranio
+  #     - name: Install Uranio
+  #       run: yarn global add uranio
 
-      # - name: Get yarn cache directory path
-      #   id: yarn-cache-dir-path
-      #   run: echo "::set-output name=dir::$(yarn cache dir)"
+  #     # - name: Get yarn cache directory path
+  #     #   id: yarn-cache-dir-path
+  #     #   run: echo "::set-output name=dir::$(yarn cache dir)"
 
-      # - uses: actions/cache@v2
-      #   id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-      #   with:
-      #     path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-      #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-yarn-
+  #     # - uses: actions/cache@v2
+  #     #   id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+  #     #   with:
+  #     #     path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+  #     #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+  #     #     restore-keys: |
+  #     #       ${{ runner.os }}-yarn-
 
-      - name: Set outputs
-        id: vars
-        run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+  #     - name: Set outputs
+  #       id: vars
+  #       run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
-      - name: Init Uranio
-        run: uranio init -uf --repo=adm
+  #     - name: Init Uranio
+  #       run: uranio init -uf --repo=adm
 
-      - name: Init Build
-        run: uranio docker build --docker_load -u
+  #     - name: Init Build
+  #       run: uranio docker build --docker_load -u
 
-      - name: Uranio Push to Docker Registry
-        run: |
-          uranio docker push \
-          --docker_tag="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.sha_short }}"
+  #     - name: Uranio Push to Docker Registry
+  #       run: |
+  #         uranio docker push \
+  #         --docker_tag="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.sha_short }}"
 
   #" Comment needed for syntax highlighting bug
   run_ssh_update_script:
     name: Run script on AWS that update container
-    needs: "push_to_registry"
+    # needs: "push_to_registry"
     runs-on: ubuntu-latest
     # echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
     # && chmod 400 key.pem \
@@ -89,6 +89,10 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.AWS_PRIVATE_KEY }}
+
+      - name: Download Read TOML file script
+        id: vars
+        run: wget https://raw.githubusercontent.com/x71c9/uranio-cicd/master/node_scripts/read_toml.b.js
 
       - name: Set Uranio Service Port
         id: vars1
