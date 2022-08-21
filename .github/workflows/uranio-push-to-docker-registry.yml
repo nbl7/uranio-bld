@@ -91,11 +91,11 @@ jobs:
           ssh-private-key: ${{ secrets.AWS_PRIVATE_KEY }}
 
       - name: Set Uranio Service Port
-        id: vars
+        id: vars1
         run: echo "::set-output name=service_port::$(node read_toml.b.js ./uranio.toml -k service.port)"
 
       - name: Set Uranio Client Panel Port
-        id: vars
+        id: vars2
         run: echo "::set-output name=client_port::$(node read_toml.b.js ./uranio.toml -k client.panel.port)"
 
       # - name: Run update_container.sh
@@ -117,7 +117,7 @@ jobs:
           ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
           ${{ github.event.repository.name }} \
           ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
-          ${{ steps.vars.outputs.service_port }} \
-          ${{ steps.vars.outputs.panel_port }}'
+          ${{ steps.vars1.outputs.service_port }} \
+          ${{ steps.vars2.outputs.panel_port }}'
 
 
