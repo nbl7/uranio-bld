@@ -103,7 +103,7 @@ jobs:
 
       - name: Set Uranio Client Panel Port
         id: vars2
-        run: echo "::set-output name=client_port::$(node read_toml.b.js ${{ github.workspace }}/uranio.toml -k client.panel.port)"
+        run: echo "::set-output name=panel_port::$(node read_toml.b.js ${{ github.workspace }}/uranio.toml -k client.panel.port)"
 
       # - name: Run update_container.sh
       #   run: |
