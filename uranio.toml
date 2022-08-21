@@ -20,3 +20,7 @@ dev_ssl_secure = false
 [client.dev.panel]
 	domain = '0.0.0.0'
 	port = 8383
+[client.api]
+	proxy = 'https://uranio-bld.uranio.xyz:7701/uranio/api'
+[client.dev.api]
+	proxy = ''
