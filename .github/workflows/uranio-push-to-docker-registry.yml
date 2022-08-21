@@ -124,7 +124,7 @@ jobs:
           ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
           ${{ github.event.repository.name }} \
           ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
-          -k ${{ steps.vars1.outputs.service_port }} \
-          -k ${{ steps.vars2.outputs.panel_port }}'
+          ${{ steps.vars1.outputs.service_port }} \
+          ${{ steps.vars2.outputs.panel_port }}'
 
 
