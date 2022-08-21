@@ -9,7 +9,7 @@ dev_ssl_secure = false
 [service]
 	protocol = 'http'
 	domain = 'uranio-bld.uranio.xyz'
-	port = 7107
+	port = 1107
 [dev.service]
 	domain = '0.0.0.0'
 	port = 7373
