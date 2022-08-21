@@ -7,16 +7,16 @@ dev_ssl_secure = false
 	error = true
 	request = true
 [service]
-	protocol = 'https'
+	protocol = 'http'
 	domain = 'uranio-bld.uranio.xyz'
-	port = 7777
+	port = 7107
 [dev.service]
 	domain = '0.0.0.0'
 	port = 7373
 [client.panel]
-	protocol = 'https'
+	protocol = 'http'
 	domain = 'uranio-bld.uranio.xyz'
-	port = 443
+	port = 7101
 [client.dev.panel]
 	domain = '0.0.0.0'
 	port = 8383
