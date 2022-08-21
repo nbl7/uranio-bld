@@ -10,6 +10,7 @@ dev_ssl_secure = false
 	protocol = 'http'
 	domain = 'uranio-bld.uranio.xyz'
 	port = 4401
+	proxy = 'https://uranio-bld.uranio.xyz:7701/uranio/api'
 [dev.service]
 	domain = '0.0.0.0'
 	port = 1001
@@ -17,8 +18,7 @@ dev_ssl_secure = false
 	protocol = 'http'
 	domain = 'uranio-bld.uranio.xyz'
 	port = 6601
+	proxy = 'https://uranio-bld.uranio.xyz/uranio/api'
 [client.dev.panel]
 	domain = '0.0.0.0'
 	port = 1002
-[client.api]
-	proxy = 'https://uranio-bld.uranio.xyz:7701/uranio/api'
