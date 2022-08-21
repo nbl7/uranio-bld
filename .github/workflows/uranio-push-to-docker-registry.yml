@@ -17,12 +17,12 @@ env:
   # IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  # push_to_registry:
-  #   name: Push Uranio Docker image to Docker Registry
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Check out the repo
-  #       uses: actions/checkout@v3
+  push_to_registry:
+    name: Push Uranio Docker image to Docker Registry
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
 
   #     - name: Set up Docker Buildx
   #       id: buildx
@@ -75,7 +75,7 @@ jobs:
   #" Comment needed for syntax highlighting bug
   run_ssh_update_script:
     name: Run script on AWS that update container
-    # needs: "push_to_registry"
+    needs: "push_to_registry"
     runs-on: ubuntu-latest
     # echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
     # && chmod 400 key.pem \
