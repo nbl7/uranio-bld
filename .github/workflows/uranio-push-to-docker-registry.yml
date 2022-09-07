@@ -73,58 +73,58 @@ jobs:
           --docker_tag="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.vars.outputs.sha_short }}"
 
   #" Comment needed for syntax highlighting bug
-  run_ssh_update_script:
-    name: Run script on AWS that update container
-    needs: "push_to_registry"
-    runs-on: ubuntu-latest
-    # echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
-    # && chmod 400 key.pem \
-    # ssh-add - <<<"${{ secrets.AWS_PRIVATE_KEY }}" \
-    steps:
-      - name: Check out the repo
-        uses: actions/checkout@v3
+  # run_ssh_update_script:
+  #   name: Run script on AWS that update container
+  #   needs: "push_to_registry"
+  #   runs-on: ubuntu-latest
+  #   # echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
+  #   # && chmod 400 key.pem \
+  #   # ssh-add - <<<"${{ secrets.AWS_PRIVATE_KEY }}" \
+  #   steps:
+  #     - name: Check out the repo
+  #       uses: actions/checkout@v3
 
-      - name: Add known host
-        run: |
-          mkdir -p ~/.ssh/ && ssh-keyscan -t rsa ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
+  #     - name: Add known host
+  #       run: |
+  #         mkdir -p ~/.ssh/ && ssh-keyscan -t rsa ${{ secrets.AWS_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Configure SSH agent
-        uses: webfactory/ssh-agent@v0.5.4
-        with:
-          ssh-private-key: ${{ secrets.AWS_PRIVATE_KEY }}
+  #     - name: Configure SSH agent
+  #       uses: webfactory/ssh-agent@v0.5.4
+  #       with:
+  #         ssh-private-key: ${{ secrets.AWS_PRIVATE_KEY }}
 
-      - name: Download Read TOML file script
-        id: vars
-        run: wget https://raw.githubusercontent.com/x71c9/uranio-cicd/master/node_scripts/read_toml.b.js
+  #     - name: Download Read TOML file script
+  #       id: vars
+  #       run: wget https://raw.githubusercontent.com/x71c9/uranio-cicd/master/node_scripts/read_toml.b.js
 
-      - name: Set Uranio Service Port
-        id: vars1
-        run: echo "::set-output name=service_port::$(node read_toml.b.js ${{ github.workspace }}/uranio.toml -k service.port)"
+  #     - name: Set Uranio Service Port
+  #       id: vars1
+  #       run: echo "::set-output name=service_port::$(node read_toml.b.js ${{ github.workspace }}/uranio.toml -k service.port)"
 
-      - name: Set Uranio Client Panel Port
-        id: vars2
-        run: echo "::set-output name=panel_port::$(node read_toml.b.js ${{ github.workspace }}/uranio.toml -k client.panel.port)"
+  #     - name: Set Uranio Client Panel Port
+  #       id: vars2
+  #       run: echo "::set-output name=panel_port::$(node read_toml.b.js ${{ github.workspace }}/uranio.toml -k client.panel.port)"
 
-      # - name: Run update_container.sh
-      #   run: |
-      #     echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
-      #     && chmod 400 key.pem \
-      #     && ssh -i key.pem ec2-user@${{ secrets.AWS_HOST }} \
-      #     'bash -s < ~/repos/uranio-cicd/gitlab/update_container.sh \
-      #     ${{ env.GITLAB_PROJECT_ID }} \
-      #     ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
-      #     ${{ github.event.repository.name }} \
-      #     ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}'
+  #     # - name: Run update_container.sh
+  #     #   run: |
+  #     #     echo "${{ secrets.AWS_PRIVATE_KEY }}" > key.pem \
+  #     #     && chmod 400 key.pem \
+  #     #     && ssh -i key.pem ec2-user@${{ secrets.AWS_HOST }} \
+  #     #     'bash -s < ~/repos/uranio-cicd/gitlab/update_container.sh \
+  #     #     ${{ env.GITLAB_PROJECT_ID }} \
+  #     #     ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
+  #     #     ${{ github.event.repository.name }} \
+  #     #     ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}'
 
-      - name: Run update_container.sh
-        run: |
-          ssh ec2-user@${{ secrets.AWS_HOST }} \
-          'bash -s < ~/repos/uranio-cicd/gitlab/update_container.sh \
-          ${{ env.GITLAB_PROJECT_ID }} \
-          ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
-          ${{ github.event.repository.name }} \
-          ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
-          ${{ steps.vars1.outputs.service_port }} \
-          ${{ steps.vars2.outputs.panel_port }}'
+  #     - name: Run update_container.sh
+  #       run: |
+  #         ssh ec2-user@${{ secrets.AWS_HOST }} \
+  #         'bash -s < ~/repos/uranio-cicd/gitlab/update_container.sh \
+  #         ${{ env.GITLAB_PROJECT_ID }} \
+  #         ${{ secrets.GITLAB_PERSONAL_ACCESS_TOKEN }} \
+  #         ${{ github.event.repository.name }} \
+  #         ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }} \
+  #         ${{ steps.vars1.outputs.service_port }} \
+  #         ${{ steps.vars2.outputs.panel_port }}'
 
 
