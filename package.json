@@ -20,8 +20,18 @@
 		"build:server": "uranio build:client",
 		"build:panel": "uranio build:panel",
 		"dev:server": "uranio dev:server",
-		"dev:panel": "uranio dev:panel"
+		"dev:panel": "uranio dev:panel",
+		"dev": "uranio dev",
+		"postinstall": "npx patch-package --patch-dir node_modules/uranio/patches"
 	},
-	"devDependencies": {},
-	"dependencies": {}
+	"devDependencies": {
+		"urn-adm-dep-dev": "git+ssh://git@github.com/x71c9/uranio-adm-dep-dev#master"
+	},
+	"dependencies": {
+		"uranio": "git+ssh://git@github.com/x71c9/uranio-adm.git#master"
+	},
+	"resolutions": {
+		"@oclif/plugin-help": "3.2.14",
+		"colors": "1.4.0"
+	}
 }
